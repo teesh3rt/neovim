@@ -6,6 +6,41 @@ return {
 	-- config = function() vim.cmd.colorscheme("pywal") end
     },
     {
+	"dstein64/nvim-scrollview",
+	version = "*",
+	opts = {
+	    insert_at_start = true,
+	},
+    },
+    {
+	'SuperBo/fugit2.nvim',
+	build = false,
+	opts = {
+	    width = 100,
+	    insert_at_start = true,
+	},
+	dependencies = {
+	    'MunifTanjim/nui.nvim',
+	    'nvim-tree/nvim-web-devicons',
+	    'nvim-lua/plenary.nvim',
+	    {
+		'chrisgrieser/nvim-tinygit',
+		dependencies = { 'stevearc/dressing.nvim' }
+	    },
+	},
+	cmd = { 'Fugit2', 'Fugit2Diff', 'Fugit2Graph' },
+	keys = {
+	    { '<C-H>', mode = 'n', '<cmd>Fugit2<cr>' }
+	}
+    },
+    {
+	"m4xshen/autoclose.nvim",
+	version = "*",
+	opts = {
+	    insert_at_start = true,
+	},
+    },
+    {
 	"nvim-tree/nvim-tree.lua",
 	version = "*",
         lazy = false,
